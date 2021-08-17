@@ -1,5 +1,5 @@
-from pytube import YouTube
-link = input("Enter URL of video")
-video = YouTube(link)
-stream = video.stream.get_highest_resolution()
+import pytube
+link = "https://www.youtube.com/watch?v=mpjREfvZiDs"
+yt = pytube.YouTube(link)
+stream = yt.streams.first()
 stream.download()
